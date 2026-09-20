@@ -1,0 +1,17 @@
+{
+  "name": "release-dashboard",
+  "version": "1.0.0",
+  "description": "A small deployment dashboard for the production-grade CI/CD project",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint .",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.36.0"
+  }
+}
