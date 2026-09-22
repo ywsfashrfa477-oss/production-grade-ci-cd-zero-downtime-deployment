@@ -44,7 +44,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
       - name: Build Docker image
-        run: docker build -f .github/Dockerfile -t release-dashboard:${{ github.sha }} .
+        run: docker build -f  Dockerfile -t my-app .
 
   sast:
     name: SAST with Semgrep
