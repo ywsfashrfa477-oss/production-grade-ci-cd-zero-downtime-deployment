@@ -49,6 +49,17 @@ jobs:
 			- name: Run unit tests
 				run: npm test
 
+	docker-build:
+		name: Docker build
+		runs-on: ubuntu-latest
+
+		steps:
+			- name: Checkout repository
+				uses: actions/checkout@v4
+
+			- name: Build Docker image
+				run: docker build -t my-app:latest .
+
 	sast:
 		name: SAST with Semgrep
 		runs-on: ubuntu-latest
@@ -93,3 +104,4 @@ jobs:
 				uses: gitleaks/gitleaks-action@v2
 				env:
 					GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+					
